@@ -1,0 +1,31 @@
+{
+  "name": "guess-song",
+  "version": "0.0.1",
+  "description": "哈哈竞猜的猜歌项目",
+  "main": [],
+  "dependencies": {
+    "jquery": "~1.12.2",
+    "fastclick": "~1.0.6",
+    "modernizr": "~3.3.1"
+  },
+  "devDependencies": {},
+  "moduleType": [
+    "amd",
+    "globals",
+    "node"
+  ],
+  "keywords": [
+    ""
+  ],
+  "authors": [
+    "guochao"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ]
+}

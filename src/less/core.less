@@ -1,0 +1,96 @@
+* {
+  padding: 0;
+  margin: 0
+}
+
+*, :after, :before {
+  box-sizing: border-box
+}
+
+html {
+  box-sizing: border-box
+}
+body {
+  font-size: px2rem(16);
+  font-family: "Microsoft YaHei", Arial, Helvetica, sans-serif
+}
+
+ol, ul {
+  list-style-type: none
+}
+
+img {
+  height: auto
+}
+
+a {
+  text-decoration: none
+}
+
+a:link, a:visited {
+  outline: 0
+}
+
+
+.f-center {
+  text-align: center
+}
+
+.f-left {
+  text-align: left
+}
+
+.f-right {
+  text-align: right
+}
+
+.f-vm {
+  vertical-align: middle
+}
+
+
+body, html {
+  overflow-x: hidden
+}
+
+body {
+  color: #fff;
+  background: #102e56
+}
+
+a {
+  transition: color 200ms ease 0s;
+  color: #ffc70e
+}
+
+a:focus, a:hover {
+  color: #fff
+}
+
+.shadow-text, a, h1, h2, h3, h4, h5, h6, p, span {
+  text-shadow: 1px 1px 1px rgba(0, 0, 0, .5)
+}
+
+.clearFix:after {
+  display: block;
+  visibility: hidden;
+  clear: both;
+  height: 0;
+  content: '.'
+}
+
+.clearFix {
+  display: block;
+  *display: inline-block
+}
+
+* html .clearFix {
+  height: 1%
+}
+
+.wrapper {
+  position: relative;
+  -webkit-transition: all .6s ease 0s;
+  transition: all .6s ease 0s
+}
+
