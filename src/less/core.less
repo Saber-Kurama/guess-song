@@ -1,96 +1,72 @@
-* {
-  padding: 0;
-  margin: 0
-}
-
-*, :after, :before {
-  box-sizing: border-box
-}
-
-html {
-  box-sizing: border-box
+body, html {
+  min-height: 100%
 }
 body {
-  font-size: px2rem(16);
-  font-family: "Microsoft YaHei", Arial, Helvetica, sans-serif
+  -webkit-user-select: none;
+  user-select: none
 }
-
-ol, ul {
-  list-style-type: none
+a, img {
+  -webkit-touch-callout: none
 }
-
-img {
-  height: auto
+body {
+  background-color: #f5f5f9
 }
-
+body.am-bg-white {
+  background-color: #fff
+}
+body, button, input, select, textarea {
+  font-size: 16px;
+  line-height: 1.5;
+  color: #333;
+  font-family: "Helvetica Neue", Helvetica, STHeiTi, sans-serif
+}
+input {
+  line-height: normal
+}
 a {
+  color: #0ae;
   text-decoration: none
 }
-
-a:link, a:visited {
-  outline: 0
-}
-
-
-.f-center {
-  text-align: center
-}
-
-.f-left {
-  text-align: left
-}
-
-.f-right {
-  text-align: right
-}
-
-.f-vm {
-  vertical-align: middle
-}
-
-
-body, html {
-  overflow-x: hidden
-}
-
-body {
-  color: #fff;
-  background: #102e56
-}
-
-a {
-  transition: color 200ms ease 0s;
-  color: #ffc70e
-}
-
-a:focus, a:hover {
-  color: #fff
-}
-
-.shadow-text, a, h1, h2, h3, h4, h5, h6, p, span {
-  text-shadow: 1px 1px 1px rgba(0, 0, 0, .5)
-}
-
-.clearFix:after {
-  display: block;
+.fn-clear:after {
   visibility: hidden;
-  clear: both;
-  height: 0;
-  content: '.'
-}
-
-.clearFix {
   display: block;
-  *display: inline-block
+  font-size: 0;
+  content: " ";
+  clear: both;
+  height: 0
 }
-
-* html .clearFix {
-  height: 1%
+.fn-hide {
+  display: none
 }
-
-.wrapper {
-  position: relative;
-  -webkit-transition: all .6s ease 0s;
-  transition: all .6s ease 0s
+.fn-left {
+  float: left
 }
-
+.fn-right {
+  float: right
+}
+.am-content {
+  margin-left: 10px;
+  margin-right: 10px
+}
+.am-content h5 {
+  margin: 0;
+  padding: 0;
+  font-weight: 400;
+  line-height: 1.5
+}
+.am-fixed {
+  position: fixed!important;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 99;
+  width: 100%
+}
+.am-fixed-bottom {
+  top: inherit;
+  bottom: 0;
+}
+.user-select {
+  -webkit-user-select: auto;
+  user-select: auto;
+}

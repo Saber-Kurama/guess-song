@@ -1,3 +1,6 @@
+/*-----------------
+/*  banner 的样式
+------------------*/
 .banner-wrapper{
   width: 100%;
   height: px2rem(300);
@@ -5,4 +8,107 @@
   background-position: center center;
   background-size: cover;
 }
+/*----------------------
+/* 规则的样式
+------------------------*/
+.rule-wrapper {
+  text-align: center;
+  padding: px2rem(20);
+  .rule-title-wrapper{
+    padding: 0 px2rem(195);
+  }
+  .rule-title {
+    font-size: px2rem(30);
+    width: 100%;
+    color: #fff;
+    background: #0099bb;
+    border-radius: px2rem(20);
+    display: inline-block;
+  }
+  .rule-menu-wrapper{
+    padding: px2rem(35) px2rem(10);
+    h1{
+      font-size: px2rem(30);
+      color: #fff;
+      text-shadow: 0 px2rem(1) 0 rgba(8,63,116, 0.4);
+    }
+    .title-type{
+      flex: 1;
+    }
+    .title-date{
+      flex: 2;
+    }
+    .rule-menu-bg{
+      height: px2rem(254);
+      background: rgb(202, 199, 199);
+      border-radius: px2rem(13);
+      padding-left: px2rem(5);
+      padding-top: px2rem(11);
+      .rule-menu-item{
+        display: flex;
+        height: px2rem(49);
+        line-height: px2rem(49);
+        font-size: px2rem(28);
+        color: #000;
+        .type, .date{
+          border-bottom: px2rem(2) groove rgb(243,243,243);
+        }
+        .type{
+          flex: 1;
+          background: rgba(255, 255, 255, 0.4);
+        }
+        .date{
+          flex: 2;
+        }
+      }
+      .rule-menu-item:last-child{
+        .type{
+          border-radius: 0 0 px2rem(9) px2rem(9) ;
+          border-bottom-width: 0;
+        }
+        .date{
+          border-bottom: 0;
+        }
+      }
+    }
+  }
+  .rule-list{
+    text-align: left;
+    list-style: decimal;
+    font-size: px2rem(28);
+    color: #000;
+    li{
+      margin-bottom: px2rem(30);
+    }
+  }
+  .tip{
+    color: red;
+    text-align: left;
+    font-size: px2rem(28);
+  }
+}
 
+
+
+/*-----------------------------
+/* 底部 按钮的样式
+------------------------------*/
+.footer{
+  //position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  button{
+    height: px2rem(98);
+    line-height: px2rem(98);
+
+    border: 0;
+    color: #fff;
+    background-color: #0099bb;
+    display: inline-block;
+    width: 100%;
+    padding: 0 px2rem(4);
+    text-align: center;
+    font-size: px2rem(34);
+  }
+}
