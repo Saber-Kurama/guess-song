@@ -1,5 +1,5 @@
 .message-bg{
-  background: rgba(15,0,9, 0.4);
+  background: rgba(0,0,0, 0.7);
   display: block;
   position: absolute;
   width: 100vw;
@@ -28,17 +28,46 @@
     position: relative;
     margin: 0 auto;
     width:px2rem(540);
-    background: #fff;
+    background: linear-gradient(#0696b6, #032149);
     border-radius: px2rem(10);
     min-height: px2rem(150);
-    padding: px2rem(100) px2rem(50) px2rem(20);
+    padding: px2rem(50) px2rem(50) px2rem(20);
+    border-width: px2rem(3);
+    //border-style: solid;
+    //border-image: linear-gradient(to bottom, black, rgba(255,255,255,1)) 1 1;
+    &:after{
+      content: ' ';
+      position: absolute;
+      top: px2rem(-3);
+      left: px2rem(-3);
+      bottom: px2rem(-3);
+      right: px2rem(-3);
+      background: linear-gradient(#31fdf5, #0c8dce);
+      border-radius: px2rem(10);
+      z-index: -1;
+    }
+    .avatar{
+      width: px2rem(150);
+      height: px2rem(150);
+      border-radius: 50%;
+      background: red;
+      position: absolute;
+      left:50%;
+      top:px2rem(-120);
+      margin-left: px2rem(-75);
+    }
     .content{
-      font-size: px2rem(32);
-      color: #000;
-      text-align: left;
+      font-size: px2rem(36);
+      color: rgb(209, 219, 224);
+      text-align: center;
+    }
+    .subcontent {
+      font-size: px2rem(30);
+      color: rgb(232, 39, 1);
+      text-align: center;
     }
     .btn-wrapper{
-      margin-top:px2rem(70) ;
+      margin-top:px2rem(44) ;
 
       button{
         font-size: px2rem(28);
