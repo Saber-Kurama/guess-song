@@ -1,0 +1,94 @@
+.play-wrapper{
+  box-sizing: border-box;
+  width: 100vw;
+  min-height: 100vh;
+  background: #0099bb;
+  background-image: repeating-linear-gradient(30deg,
+  rgba(255,255,255, 0.05), rgba(255,255,255,.05) px2rem(15),
+  transparent 0, transparent px2rem(30));
+  .play-top{
+    box-sizing: border-box;
+    display: flex;
+    justify-content: center;
+    left: 0;
+    top: 0;
+    height: px2rem(208);
+    background: rgba(0,0,0,.3);
+    //opacity: 0.3;
+    width: 100%;
+    padding: px2rem(30) px2rem(20);
+    .avatar{
+
+      width: px2rem(150);
+      height: px2rem(150);
+      border-radius: 50%;
+      background: red;
+    }
+    .info{
+      flex: 1;
+      padding-left: px2rem(40);
+      font-size: px2rem(36);
+      color: #fff;
+      .name{
+
+      }
+      .time{
+        margin-top: px2rem(40) ;
+        font-size: px2rem(36);
+
+      }
+      .sec{
+        border-radius: px2rem(5);
+        background: #941f1f;
+        background-image: linear-gradient( 0deg, rgba(0,0,0,.2) 0%, rgba(255,255,255,.2) 100%);
+        box-shadow: 0 px2rem(1) px2rem(1) 0 rgba(0, 0, 0, 0.5),
+                  inset 0 px2rem(1) 0 0 #941f1f;
+        width: px2rem(128);
+        height: px2rem(50);
+        display: inline-block;
+        text-align: center;
+        margin-left: px2rem(10);
+        margin-right: px2rem(10);
+      }
+    }
+  }
+
+  .play-title{
+    color: #fff;
+    font-size: px2rem(30);
+    height: px2rem(84);
+    line-height: px2rem(84);
+    padding: 0 px2rem(20);
+    text-align: center;
+  }
+
+  .play-list{
+    padding: 0 px2rem(20);
+    .play-item{
+      height: px2rem(180);
+      background: #43aac1;
+      background-image: linear-gradient(0deg, rgba(0,0,0,.3) 0%, rgba(255,255,255,.3) 100%);
+      border-radius: px2rem(5);
+      box-shadow: 0 0 px2rem(1) 0 rgba(0, 102, 124, 0.55),
+                inset 0 px2rem(2) 0 0 rgba(33, 199, 235, 0.5);
+      display: flex;
+      padding: 0 px2rem(36);
+      flex-direction: column;
+      .vodie-wrapper{
+        flex: 1;
+      }
+      .choose-wrapper{
+        flex: 1;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        .choose-item{
+          flex: 1;
+          text-align: center;
+          font-size: px2rem(24);
+          color: #fff;
+        }
+      }
+    }
+  }
+}

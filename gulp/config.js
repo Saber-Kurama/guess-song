@@ -61,7 +61,7 @@ module.exports = {
     'dest': 'dist/css'
   },
   'views': {
-    src: ['src/index.html','src/html/**/*.html'],
+    src: ['src/*.html','src/html/**/*.html'],
     dest:'dist'
   },
   lint: {
