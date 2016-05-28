@@ -31,6 +31,10 @@ module.exports = {
     icon:{
       src: 'src/icon/**/*',
       dest: 'dist/images'
+    },
+    json:{
+      src: 'src/json/*',
+      dest: 'dist/json'
     }
   },
   src: 'src',

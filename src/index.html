@@ -87,7 +87,8 @@
     </footer>
 
 </div>
-<div class="dialog-bg" style="display: none;">
+<!-- 红包不足 -->
+<div class="dialog-bg" style="display: none;" id="noredpg">
     <div class="dialog-wrapper">
 
 
@@ -97,16 +98,34 @@
                 红包余额不足，快去邀请_好友注册，明天继续竞猜！
             </div>
             <div class="btn-wrapper fn-clear">
-                <button class="fn-left">立即邀请</button>
-                <button class="fn-right">退出竞猜</button>
+                <button class="fn-left" id="inviteBtn">立即邀请</button>
+                <button class="fn-right" id="quitGuessBtn">退出竞猜</button>
             </div>
         </div>
     </div>
+</div>
+<!-- 红包充足 -->
+<div class="dialog-bg" style="display: none;" id="hasredpg">
+    <div class="dialog-wrapper">
 
+
+        <div class="dialog">
+            <div class="title"></div>
+            <div class="content">
+                本周竞猜将扣除红包链1元,如同意,请点击"立即参与"
+            </div>
+            <div class="btn-wrapper fn-clear">
+                <button class="fn-left" id="playerBtn">立即参与</button>
+                <button class="fn-right" id="noPlayerBtn">暂不参与</button>
+            </div>
+        </div>
+    </div>
 </div>
 <script src="<!-- @echo WEB_ROOT -->/js/vendors.js"></script>
 <!-- @if NODE_ENV!='production' -->
 <!-- build:js /js/index.min.js -->
+<script src="<!-- @echo WEB_ROOT -->/js/apiConfig.js"></script>
+<script src="<!-- @echo WEB_ROOT -->/js/api.js"></script>
 <script src="<!-- @echo WEB_ROOT -->/js/common.js"></script>
 <script src="<!-- @echo WEB_ROOT -->/js/index.js"></script>
 <!-- endbuild -->
