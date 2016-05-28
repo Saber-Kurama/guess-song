@@ -25,5 +25,11 @@ var apiConfig = [
     method: 'get',
     url: baseApiUrl + 'json/getRandomNumber.json',
     desc: '获取 选择明星的随机数'
+  },
+  {
+    name:"getStarById",
+    method: 'get',
+    url: baseApiUrl + 'json/getStarById.json',
+    desc: '获取 明星信息以及歌曲列表'
   }
 ]

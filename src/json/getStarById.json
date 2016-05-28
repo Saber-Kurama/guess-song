@@ -1,0 +1,65 @@
+{
+  "id": "001",
+  "name":"周杰伦",
+  "image": "../images/head/01.jpg",
+  "songlist":[
+    {
+      "id":"sl001",
+      "names":[
+        {
+          "key":"slname001",
+          "value": "东风破"
+        },
+        {
+          "key":"slname002",
+          "value": "东风破1"
+        },
+        {
+          "key":"slname003",
+          "value": "东风破2"
+        }
+      ],
+      "songurl":"http://michaelmammoliti.com/_projects/audioJS/songs/01.mp3",
+      "totaltext":"00:29"
+    },
+    {
+      "id":"sl02",
+      "names":[
+        {
+          "key":"slname001",
+          "value": "青花瓷"
+        },
+        {
+          "key":"slname002",
+          "value": "青花瓷1"
+        },
+        {
+          "key":"slname003",
+          "value": "青花瓷2"
+        }
+      ],
+      "songurl":"http://michaelmammoliti.com/_projects/audioJS/songs/01.mp3",
+      "totaltext":"00:29"
+    },
+    {
+      "id":"sl03",
+      "names":[
+        {
+          "key":"slname001",
+          "value": "兰亭序"
+        },
+        {
+          "key":"slname002",
+          "value": "兰亭序1"
+        },
+        {
+          "key":"slname003",
+          "value": "兰亭序2"
+        }
+      ],
+      "songurl":"http://michaelmammoliti.com/_projects/audioJS/songs/01.mp3",
+      "totaltext":"00:29"
+    }
+  ]
+
+}
