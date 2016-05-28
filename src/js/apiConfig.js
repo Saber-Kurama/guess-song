@@ -13,5 +13,11 @@ var apiConfig = [
     method: 'get',
     url: baseApiUrl + 'json/getRedPackage.json',
     desc: '获取用户剩余红包的接口'
+  },
+  {
+    name: 'getStarList',
+    method: 'get',
+    url: baseApiUrl+'json/getStarList.json',
+    desc: '获取 转盘 中12位明星的信息'
   }
 ]

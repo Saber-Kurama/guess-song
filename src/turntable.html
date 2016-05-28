@@ -28,15 +28,17 @@
         <span>红包链余额：2元</span>
     </div>
     <div class="turntable-wrapper">
-        <div class="turntable">
+        <div class="turntable" id="turntable">
             <div class="pointer-wrapper">
                 <div class="pointer">
 
                 </div>
             </div>
             <div class="rotate">
+                <!--
                 <div class="prize">
-                    <div class="avatar">
+                    <div class="avatar"  style="background-image:
+                    url('/images/head/01.jpg')">
 
                     </div>
                 </div>
@@ -95,6 +97,7 @@
 
                     </div>
                 </div>
+                -->
             </div>
         </div>
         <div class="turntable-bar">
@@ -104,5 +107,25 @@
         </div>
     </div>
 </div>
+<script src="<!-- @echo WEB_ROOT -->/js/vendors.js"></script>
+<!-- @if NODE_ENV!='production' -->
+<!-- build:js /js/index.min.js -->
+<script src="<!-- @echo WEB_ROOT -->/js/apiConfig.js"></script>
+<script src="<!-- @echo WEB_ROOT -->/js/api.js"></script>
+<script src="<!-- @echo WEB_ROOT -->/js/common.js"></script>
+<script src="<!-- @echo WEB_ROOT -->/js/index.js"></script>
+<script src="<!-- @echo WEB_ROOT -->/js/turntable.js"></script>
+<!-- endbuild -->
+<!--@endif-->
+<!-- @if NODE_ENV=='production' -->
+<script src="<!-- @echo WEB_ROOT -->/js/index.min.js"></script>
+<!--@endif-->
+<script>
+    $(function() {
+
+        Common.init();
+        Turntable.init();
+    })
+</script>
 </body>
 </html>

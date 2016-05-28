@@ -20,7 +20,7 @@
     justify-content: center;
     position: relative;
     overflow: hidden;
-    transform: translateY(px2rem(130));
+    transform: translateY(px2rem(40));
     .pointer-wrapper {
       width: px2rem(194);
       height: px2rem(194);
@@ -80,7 +80,9 @@
         .avatar{
           width: px2rem(90);
           height: px2rem(90);
-          background-color: palevioletred;
+          //background-color: palevioletred;
+          background-repeat: no-repeat;
+          background-size: cover;
           border-radius: 50%;
         }
         .rotateloop(@headertotal);
@@ -92,7 +94,7 @@
     height: px2rem(100);
     width: 100vw;
     position: relative;
-    //transform: translateY(px2rem(-160));
+    transform: translateY(px2rem(-120));
     .bar{
       position: absolute;
       width: px2rem(129);
@@ -124,5 +126,9 @@
   //}
   &:nth-of-type(@{counter}){
     transform: rotate( ( 360 / @headertotal )* @counter * 1deg);
+    .avatar{
+      transform: rotate( ( 360 / @headertotal )* @counter * -1deg);
+    }
   }
+
 }
