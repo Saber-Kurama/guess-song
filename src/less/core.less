@@ -1,50 +1,61 @@
-*{
+* {
   box-sizing: border-box;
 }
+
 body, html {
   min-height: 100vh;
   min-height: 100%;
   position: relative;
 }
+
 body {
   -webkit-user-select: none;
   user-select: none
 }
+
 a, img {
   -webkit-touch-callout: none
 }
+
 body {
   background-color: #f5f5f9
 }
+
 body.am-bg-white {
   background-color: #fff
 }
+
 body, button, input, select, textarea {
   font-size: 16px;
   line-height: 1.5;
   color: #333;
   font-family: "Helvetica Neue", Helvetica, STHeiTi, sans-serif
 }
-input,button,select,textarea{
-  outline:none;
+
+input, button, select, textarea {
+  outline: none;
   border: 0;
 }
 
-input[type="radio"]{
+input[type="radio"] {
   -webkit-appearance: none;
-  appearance:none;
+  appearance: none;
 }
+
 input[type="radio"]:checked {
   outline: none;
   //background: red;
 }
+
 input {
   line-height: normal
 }
+
 a {
   color: #0ae;
   text-decoration: none
 }
+
 .fn-clear:after {
   visibility: hidden;
   display: block;
@@ -53,37 +64,59 @@ a {
   clear: both;
   height: 0
 }
+
 .fn-hide {
   display: none
 }
+
 .fn-left {
   float: left
 }
+
 .fn-right {
   float: right
+}
+
+.inlineb {
+  display: inline-block;
+}
+.flex{
+  display: flex;
+}
+.rv-center{
+  position: absolute;
+  display: table;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%,-50%);
+  transform: translate(-50%,-50%);
 }
 .am-content {
   margin-left: 10px;
   margin-right: 10px
 }
+
 .am-content h5 {
   margin: 0;
   padding: 0;
   font-weight: 400;
   line-height: 1.5
 }
+
 .am-fixed {
-  position: fixed!important;
+  position: fixed !important;
   top: 0;
   left: 0;
   right: 0;
   z-index: 99;
   width: 100%
 }
+
 .am-fixed-bottom {
   top: inherit;
   bottom: 0;
 }
+
 .user-select {
   -webkit-user-select: auto;
   user-select: auto;

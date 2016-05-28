@@ -74,8 +74,155 @@
       display: flex;
       padding: 0 px2rem(36);
       flex-direction: column;
-      .vodie-wrapper{
+      .audio-wrapper{
         flex: 1;
+        padding: 0;
+        .audio-bg{
+          margin-top: px2rem(30);
+          width: px2rem(530);
+          height: px2rem(54);
+          border-radius: px2rem(5);
+          box-shadow: 0 px2rem(1) px2rem(1) rgba(0,55,67,.5),
+          inset 0 px2rem(1) rgba(255,255,255,.2);
+          background-color: #00a4ea;
+          display: flex;
+          //vertical-align: middle;
+          //background-image: linear-gradient(to top, rgba(0,0,0,.2), rgba(255,255,255,.2));
+          //.audio-time-elapsed-wrapper,.audio-time-total-wrapper{
+          //  height: 100%;
+          //  position: relative;
+          //  > span{
+          //    font-size: px2rem(24);
+          //    color: #fff;
+          //    position: absolute;
+          //    display: table;
+          //    top: 50%;
+          //    //left: 50%;
+          //    //-webkit-transform: translate(-50%,-50%);
+          //    transform: translate(0%,-50%);
+          //  }
+          //}
+          .audio-time-elapsed,.audio-time-total{
+            font-size: px2rem(24);
+            color: #fff;
+            text-align: center;
+            vertical-align: middle;
+            padding: 0 px2rem(3);
+            height: px2rem(54);
+            line-height: px2rem(54);
+          }
+          .audio-progress-bar-wrapper{
+            flex: 1;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            position: relative;
+          }
+          .audio-progress-bar{
+            //width: px2rem(275);
+            flex: 1;
+            height: px2rem(18);
+            position: relative;
+            background: rgba(255,255,255,.3);
+            cursor: pointer;
+            border-radius: 10px;
+            overflow: hidden;
+          }
+          .audio-progress-bar-played{
+            width: 231px;
+            height: px2rem(18);
+            -webkit-border-radius: 5px 6px 6px 5px/5px;
+            -moz-border-radius: 5px 6px 6px 5px/5px;
+            border-radius: 5px 6px 6px 5px/5px;
+            background-color: #ffe076;
+            -webkit-box-shadow: inset 1px 1px rgba(250,223,131,.75);
+            -moz-box-shadow: inset 1px 1px rgba(250,223,131,.75);
+            box-shadow: inset 1px 1px rgba(250,223,131,.75);
+            //background: #0099bb; ccb35e
+            background-image: repeating-linear-gradient(30deg,
+            rgba(0,0,0, 0.2) 0, rgba(0,0,0, 0.2) px2rem(15),
+            transparent 0, transparent px2rem(30));
+          }
+          .audio-progress-bar-pointer-wrapper{
+            height: px2rem(28);
+            width: 100%;
+            position: absolute;
+            top:50%;
+            left: 0;
+            margin-top: px2rem(-14);
+          }
+          .audio-progress-bar-pointer{
+            height: px2rem(28);
+            width: px2rem(28);
+            border-radius: px2rem(5);
+            position: absolute;
+            right: 0;
+            background: linear-gradient(#008bba, #005f98);
+            .pointer-dot{
+              width: px2rem(8);
+              height: px2rem(8);
+              background: #ffe076;
+              border-radius: 50%;
+            }
+
+          }
+          .dividers{
+            width: px2rem(2);
+            background: #0f8cba;
+            height: px2rem(54);
+          }
+          .audio-btn-wrapper{
+            width: px2rem(88);
+            height: px2rem(54);
+            position: relative;
+            .btn{
+              overflow: hidden;
+              position: absolute;
+              top: 0;
+              left: 0;
+              width: 100%;
+              height: 100%;
+              background: 0 0;
+              border: 0;
+              span{
+                position: absolute;
+                display: table;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%,-50%);
+                overflow: hidden;
+                &:before,&:after{
+                  display: block;
+                  content: " ";
+                  height: 0;
+                  float: left;
+                  border-color: transparent;
+                  border-style: solid;
+                }
+                &:before {
+                  border-left: px2rem(28) solid #fff;
+                  border-top: px2rem(14)  solid transparent;
+                  border-bottom: px2rem(14)  solid transparent;
+                  border-right: 0;
+                }
+              }
+              &.action{
+                span{
+                  &:before, &:after {
+                    width: px2rem(5);
+                    height: px2rem(28);
+                    background: #fff;
+                    border: 0;
+                  }
+                  &:before{
+                    margin-right: px2rem(20);
+                  }
+                }
+              }
+            }
+          }
+        }
+
       }
       .choose-wrapper{
         flex: 1;

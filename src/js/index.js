@@ -4,15 +4,21 @@
 /*                                                                            */
 /* ************************************************************************** */
 /**
- * Created by saber on 16/4/19.
+ * Created by saber on 16/5/27.
  */
-
-var Common = {
-  init:function(){
-    this.setFastClick();
+var Index = {
+  init: function(){
+    this.setUIEvent();
   },
-  // 设置 FastClick
-  setFastClick: function() {
-    FastClick.attach(document.body)
+  setUIEvent: function(){
+    // 绑定 开始竞猜
+    $('.footer button').on('click', function(){
+      //Index.showDialog();
+      window.location.href='playsong.html'
+    });
+  },
+  // 显示弹出框
+  showDialog: function(){
+    $('.dialog-bg').show();
   }
 };

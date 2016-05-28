@@ -87,7 +87,7 @@
     </footer>
 
 </div>
-<div class="dialog-bg">
+<div class="dialog-bg" style="display: none;">
     <div class="dialog-wrapper">
 
 
@@ -104,5 +104,22 @@
     </div>
 
 </div>
+<script src="<!-- @echo WEB_ROOT -->/js/vendors.js"></script>
+<!-- @if NODE_ENV!='production' -->
+<!-- build:js /js/index.min.js -->
+<script src="<!-- @echo WEB_ROOT -->/js/common.js"></script>
+<script src="<!-- @echo WEB_ROOT -->/js/index.js"></script>
+<!-- endbuild -->
+<!--@endif-->
+<!-- @if NODE_ENV=='production' -->
+<script src="<!-- @echo WEB_ROOT -->/js/index.min.js"></script>
+<!--@endif-->
+<script>
+    $(function() {
+
+        Common.init();
+        Index.init();
+    })
+</script>
 </body>
 </html>
