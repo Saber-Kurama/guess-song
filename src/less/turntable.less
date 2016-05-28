@@ -39,7 +39,7 @@
         z-index: 1;
       }
       &:after{
-        content: '';
+        content: ' ';
         width: 0;
         height: 0;
         border: px2rem(40) solid transparent;
@@ -49,6 +49,17 @@
         z-index: 3;
         position: absolute;
       }
+      //&.active:before,&.active:after{
+      //  content: none;
+      //}
+      //&.active{
+      //  .pointer{
+      //    display: none;
+      //  }
+      //  .head-bg{
+      //    display: flex;
+      //  }
+      //}
     }
     .pointer{
       width: px2rem(194);
@@ -58,6 +69,48 @@
       border-radius: 50%;
       z-index: 3;
       position: relative;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      cursor: pointer;
+      span{
+        display: inline-block;
+        font-size: px2rem(100);
+        background: #d5b074;
+        background-image: linear-gradient(#a07932 0%, #d5b074 38%, #bfa551 100%);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+      }
+    }
+    .head-bg{
+      width: px2rem(194);
+      height: px2rem(194);
+      background: url('../images/poniterbg.png') no-repeat;
+      background-size: cover;
+      border-radius: 50%;
+      z-index: 3;
+      position: relative;
+      display: none;
+      justify-content: center;
+      align-items: center;
+      cursor: pointer;
+      .head{
+        width: px2rem(174);
+        height: px2rem(174);
+        //background: url('../images/head/01.jpg');
+        background-repeat: no-repeat;
+        background-size: cover;
+        border-radius: 50%;
+      }
+    }
+    .starname{
+      position: absolute;
+      top:px2rem(445);
+      left: px2rem(320);
+      transform: translate(-50%, -50%);
+      color: #fff;
+      font-size: px2rem(36);
+      display: none;
     }
     .rotate{
       position: absolute;
@@ -77,7 +130,7 @@
         position: absolute;
         top:50%;
         margin-top: px2rem(-45);
-        .avatar{
+        .avatar,.mask{
           width: px2rem(90);
           height: px2rem(90);
           //background-color: palevioletred;
@@ -85,7 +138,36 @@
           background-size: cover;
           border-radius: 50%;
         }
+        .mask{
+          position: absolute;
+          top:0;
+          left: 0;
+          background: rgba(0,0,0,0);
+        }
         .rotateloop(@headertotal);
+      }
+    }
+
+    &.active{
+      .pointer-wrapper{
+        &:before,&:after{
+            content: none;
+        }
+        .pointer{
+          display: none;
+        }
+        .head-bg{
+          display: flex;
+        }
+      }
+      .starname{
+        display: block;
+      }
+      //.prize .mask
+      .rotate{
+        .mask{
+          background: rgba(0,0,0,.7);
+        }
       }
     }
   }

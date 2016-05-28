@@ -19,5 +19,11 @@ var apiConfig = [
     method: 'get',
     url: baseApiUrl+'json/getStarList.json',
     desc: '获取 转盘 中12位明星的信息'
+  },
+  {
+    name:'getRandomNumber',
+    method: 'get',
+    url: baseApiUrl + 'json/getRandomNumber.json',
+    desc: '获取 选择明星的随机数'
   }
 ]
