@@ -1,0 +1,128 @@
+.turntable-wrapper{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  height: 100%;
+  flex-direction: column;
+
+  .turntable{
+    width: px2rem(640);
+    max-width: 100vw;
+    height: px2rem(640);
+    //background: #fff;
+    background: url("../images/turntable.png") no-repeat;
+    background-size: cover;
+    background-position: center center;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    overflow: hidden;
+    transform: translateY(px2rem(130));
+    .pointer-wrapper {
+      width: px2rem(194);
+      height: px2rem(194);
+      border-radius: 50%;
+      z-index: 3;
+      position: relative;
+      &:before{
+        content: ' ';
+        position: absolute;
+        width: px2rem(100);
+        height: px2rem(50);
+        background-color: #8c0000 ;
+        top:50%;
+        margin-top: px2rem(-25);
+        left: px2rem(-50);
+        z-index: 1;
+      }
+      &:after{
+        content: '';
+        width: 0;
+        height: 0;
+        border: px2rem(40) solid transparent;
+        border-right:px2rem(40) solid #8c0000;
+        margin-top: px2rem(-137);
+        left: px2rem(-125);
+        z-index: 3;
+        position: absolute;
+      }
+    }
+    .pointer{
+      width: px2rem(194);
+      height: px2rem(194);
+      background: url('../images/poniterbg.png') no-repeat;
+      background-size: cover;
+      border-radius: 50%;
+      z-index: 3;
+      position: relative;
+    }
+    .rotate{
+      position: absolute;
+      top:px2rem(30);
+      left: px2rem(30);
+      bottom: px2rem(30);
+      right: px2rem(30);
+      //width: px2rem(590);
+      //height: px2rem(590);
+      //border-radius: 50%;
+      //background: blue;
+      .prize{
+        box-sizing: border-box;
+        width: px2rem(580);
+        height: px2rem(90);
+        background: transparent;
+        position: absolute;
+        top:50%;
+        margin-top: px2rem(-45);
+        .avatar{
+          width: px2rem(90);
+          height: px2rem(90);
+          background-color: palevioletred;
+          border-radius: 50%;
+        }
+        .rotateloop(@headertotal);
+      }
+    }
+  }
+
+  .turntable-bar{
+    height: px2rem(100);
+    width: 100vw;
+    position: relative;
+    //transform: translateY(px2rem(-160));
+    .bar{
+      position: absolute;
+      width: px2rem(129);
+      height: px2rem(185);
+      background: url("../images/turntablebar.png") no-repeat;
+      background-size: cover;
+      right: 0;
+    }
+  }
+}
+
+@headertotal: 12;
+//
+//&:nth-of-type( #{$i} ){
+//  transform: rotate( ( 360 / $total )* $i * 1deg);
+//  span{
+//    animation-delay: $i * .15s;
+//  }
+//}
+//$i: $i - 1;
+//}
+
+
+.rotateloop(@counter) when (@counter > 0) {
+  .rotateloop((@counter - 1));
+
+  //nth-of-type(@counter){
+  //  //transform: rotate( ( 360 / @headertotal )* @counter * 1deg);
+  //}
+  &:nth-of-type(@{counter}){
+    transform: rotate( ( 360 / @headertotal )* @counter * 1deg);
+  }
+}
