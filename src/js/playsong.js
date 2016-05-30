@@ -99,7 +99,7 @@ var PlaySong = {
         $('.playsong-footer > .btn').prop('disabled', false);
       }
       // 开启倒计时
-      PlaySong.startTimer();
+      //PlaySong.startTimer();
     });
 
     // 绑定 提交 按钮的事件
