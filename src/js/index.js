@@ -52,7 +52,7 @@ var Index = {
     // 绑定 立即参与
     $('#playerBtn').on('click', function(){
       // 跳转到 转盘 页面 (这个地方应该会有一个 消耗一个红包链的请求?)
-      window.location.href = '/turntable.html';
+      window.location.href = 'turntable.html';
     });
 
     // 绑定 暂不参与

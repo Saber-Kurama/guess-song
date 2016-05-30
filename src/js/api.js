@@ -77,7 +77,6 @@
         type: 'GET',
         url: url
       }).then(function(data) {
-        debugger;
         return data;
       }, function(data) {
         return data;

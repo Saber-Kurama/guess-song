@@ -46,6 +46,8 @@ var PlaySong = {
     $('.play-list').html(songHtml);
     PlaySong.setUIEvent();
     PlaySong.setPlayUIEvent();
+    // 开启倒计时
+    PlaySong.startTimer();
   },
   // 渲染一条
   renderSongItem: function(data, index){
@@ -83,7 +85,7 @@ var PlaySong = {
     var html = '<div class="choose-item">'+
                   '<label>'+data.value +
                     '<input type="radio" class="checkbox" value="'+data.key+
-                      '" name="music"'+i+' />'+
+                      '" name="music'+i+'" />'+
                   '</label></div>';
     return html;
   },
@@ -106,6 +108,8 @@ var PlaySong = {
         clearTimeout(PlaySong.timer);
       }
       PlaySong.stopAll();
+      // 这里应该发一个post请求 请求结果之后 跳转
+      window.location.href = 'result.html?id=1';
     });
   },
   time: 60, // 倒计时的时长
@@ -125,6 +129,8 @@ var PlaySong = {
   },
   showTimeoutTips: function(){
     $('#timeout').show();
+    // 结束所有音乐
+    PlaySong.stopAll();
     //var time = setTimeout(function(){
     //  clearTimeout(time);
     //  $('#timeout').hide();
@@ -148,9 +154,9 @@ var PlaySong = {
         $('.playsong-footer > .btn').prop('disabled', false);
       }
       // 添加 如果 播放 倒计时 也开始
-      if(!PlaySong.timer){
-        PlaySong.startTimer();
-      }
+      //if(!PlaySong.timer){
+      //  PlaySong.startTimer();
+      //}
       // 播放事件
       var domAudio = $(this).parent().parent().find('audio')[0];
       var mark = $(this).data('num');

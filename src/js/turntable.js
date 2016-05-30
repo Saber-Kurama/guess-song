@@ -33,7 +33,7 @@ var Turntable = {
 
     var html = '<div class="prize">'+
                 '<div class="avatar"  ' +
-                  'style="background-image:url('+data.img+')">'+
+                  'style="background-image:url(\''+data.img+'\')">'+
                 '</div><div class="mask"></div></div>';
     return html;
   },
@@ -57,7 +57,7 @@ var Turntable = {
 
     // 最后结果 点击 明星头像的 跳转到 音乐猜题列表界面(可能不是这个流程)
     $('#turntable .head-bg .head').on('click', function(){
-      window.location.href = '/playsong.html?starId='+ Turntable.data.id;
+      window.location.href = 'playsong.html?starId='+ Turntable.data.id;
     })
   },
   rotateTimer: null,
