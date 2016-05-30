@@ -116,7 +116,8 @@ var Turntable = {
           && (iSpeed *= 0.7);
         }
         if(Turntable.rotateNumber !== -1 &&
-            Turntable.rotateCircle <= 0 && Math.abs(arr[Turntable.rotateNumber] - deg) <= iSpeed){
+            Turntable.rotateCircle <= 0 &&
+            Math.abs(arr[Turntable.rotateNumber] - deg) <= iSpeed){
           Turntable.rotateTimer = null;
           deg = arr[Turntable.rotateNumber];
           var timer = setTimeout(function(){
@@ -125,7 +126,7 @@ var Turntable = {
           }, 600);
         }else {
 
-          requestAnimationFrame(function(deg) {
+          requestAnimationFrame(function() {
             Turntable.animateRotate(deg)
           });
         }
